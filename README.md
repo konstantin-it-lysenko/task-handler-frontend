@@ -22,7 +22,7 @@ provides a convenient way to organize your tasks and time perfectly.
 Clone the project
 
 ```bash
-  git clone https://github.com/lizaklimova/task-handler-frontend
+  git clone https://github.com/konstantin-it-lysenko/task-handler-frontend
 ```
 
 Go to the project directory
