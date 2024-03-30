@@ -1,6 +1,6 @@
 import { axiosInstance } from '@/api/interceptors';
 import { IAuthForm, IAuthResponse } from './../types/auth.types';
-import { saveTokenStorage } from './auth-token.service';
+import { removeFromStorage, saveTokenStorage } from './auth-token.service';
 export const authService = {
     async main(type: 'login' | 'register', data: IAuthForm) {
         const response = await axiosInstance.post<IAuthResponse>(
@@ -19,6 +19,14 @@ export const authService = {
         )
 
         if (response.data.accessToken) saveTokenStorage(response.data.accessToken)
+        
+        return response
+    },
+
+    async logout() {
+        const response = await axiosInstance.post<boolean>('auth/logout')
+
+        if (response.data) removeFromStorage()
         
         return response
     }
