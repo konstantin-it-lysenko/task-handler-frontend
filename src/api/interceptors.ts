@@ -1,3 +1,4 @@
+import { getAccessToken } from '@/services/auth-token.service';
 import axios, { type CreateAxiosDefaults } from 'axios';
 
 const options: CreateAxiosDefaults = {
@@ -14,5 +15,10 @@ const axiosWithAuth = axios.create(options)
 
 axiosWithAuth.interceptors.request.use(config => {
     const accessToken = getAccessToken()
+
+    if (config?.headers && accessToken)
+        config.headers.Authorization = `Bearer ${accessToken}`
+
+    return config
 })
 
