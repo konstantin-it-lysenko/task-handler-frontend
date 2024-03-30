@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import { SITE_NAME } from "@/constants/seo.constants";
 import { Providers } from "./providers";
 import { Toaster } from "sonner";
