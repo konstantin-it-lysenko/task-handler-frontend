@@ -1,3 +1,5 @@
+'use client'
+
 import { useIsFetching, useIsMutating } from "@tanstack/react-query"
 import Loader from "@/components/ui/Loader"
 
