@@ -34,7 +34,10 @@ export const Auth = () => {
     }
 
     return (<div className='flex min-h-screen'>
-        <form className='w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout'>
+        <form
+            className='w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout'
+            onSubmit={handleSubmit(onSubmit)}
+        >
             <Heading title='Auth' />
 
             <Field
