@@ -1,4 +1,4 @@
-import { CalendarRange, KanbanSquare, LayoutDashboard } from "lucide-react";
+import { CalendarRange, KanbanSquare, LayoutDashboard, Settings } from "lucide-react";
 import { DASHBOARD_PAGES } from "@/config/pages-url.config";
 import type { IMenuItem } from "./menu.interface";
 
@@ -16,6 +16,11 @@ export const MENU: IMenuItem[] = [
     {
         icon: CalendarRange,
         link: DASHBOARD_PAGES.TIME_BLOCKING,
-        name: 'Time bloacking'
+        name: 'Time blocking'
+    },
+    {
+        icon: Settings,
+        link: DASHBOARD_PAGES.SETTINGS,
+        name: 'Settings'
     }
 ]
