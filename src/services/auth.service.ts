@@ -24,7 +24,7 @@ export const authService = {
     },
 
     async logout() {
-        const response = await axiosInstance.post<boolean>('auth/logout')
+        const response = await axiosInstance.post<boolean>('/auth/logout')
 
         if (response.data) removeFromStorage()
         
