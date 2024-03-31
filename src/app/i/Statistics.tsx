@@ -3,7 +3,7 @@
 import Loader from '@/components/ui/Loader'
 import { useProfile } from '@/hooks/useProfile'
 
-const Statistics = () => {
+export function Statistics () {
     const {data, isLoading} = useProfile()
 
     return isLoading ? <Loader /> : <ul className='grid grid-cols-4 gap-12 mt-7'>
@@ -22,5 +22,3 @@ const Statistics = () => {
         )}
     </ul>
 }
-
-export default Statistics
