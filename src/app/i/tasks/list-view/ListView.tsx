@@ -23,7 +23,7 @@ export function ListView() {
         </div>
       </div>
 
-      <div className={styles.parentsWrapper}>
+      <ul className={styles.parentsWrapper}>
         {COLUMNS.map(column => (
           <ListRowParent
             items={items}
@@ -33,7 +33,7 @@ export function ListView() {
             key={column.value}
           />
         ))}
-      </div>
+      </ul>
     </DragDropContext>
   ) 
 }
