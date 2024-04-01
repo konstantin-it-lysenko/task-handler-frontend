@@ -1,4 +1,4 @@
-import { FILTERS } from '@/app/tasks/columns.data';
+import { FILTERS } from '@/app/i/tasks/columns.data';
 import { useUpdateTask } from './useUpdateTask';
 import { DropResult } from '@hello-pangea/dnd'
 
