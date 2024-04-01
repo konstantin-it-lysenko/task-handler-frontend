@@ -18,7 +18,7 @@ import { TransparentField } from '@/components/ui/fields/TransparentField'
 
 interface IListRow {
     item: ITaskResponse
-    setItems: Dispatch<SetStateAction<ITaskResponse[]>>
+    setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>
 }
 
 export function ListRow({item, setItems}: IListRow) {
