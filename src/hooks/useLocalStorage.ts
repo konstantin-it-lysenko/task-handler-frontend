@@ -1,8 +1,12 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
-export function useLocalStorage<T>(
+interface IUseLocalStorage<T> {
     key: string,
     defaultValue: T
+}
+
+export function useLocalStorage<T>(
+    {defaultValue, key}: IUseLocalStorage<T>
 ): [T, Dispatch<SetStateAction<T>>, boolean] {
     const [isLoading, setIsLoading] = useState(true)
 
