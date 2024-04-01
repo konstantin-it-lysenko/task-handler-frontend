@@ -25,12 +25,14 @@ export function Sidebar() {
             </Link>
             <div className="p-3 relative">
                 <LogoutButton />
-                {MENU.map(item => (
-                    <MenuItem
-                        key={item.link}
-                        item={item}
-                    />
-                ))}
+                <ul className="mt-3">
+                    {MENU.map(item => (
+                        <MenuItem
+                            key={item.link}
+                            item={item}
+                        />
+                    ))}
+                </ul>
             </div>
         </div>
 
