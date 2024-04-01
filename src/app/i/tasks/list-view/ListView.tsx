@@ -21,19 +21,20 @@ export function ListView() {
           <div>Due date</div>
           <div>Priority</div>
         </div>
+
+        <div className={styles.parentsWrapper}>
+          {COLUMNS.map(column => (
+            <ListRowParent
+              items={items}
+              label={column.label}
+              value={column.value}
+              setItems={setItems}
+              key={column.value}
+            />
+          ))}
+        </div>
       </div>
 
-      <ul className={styles.parentsWrapper}>
-        {COLUMNS.map(column => (
-          <ListRowParent
-            items={items}
-            label={column.label}
-            value={column.value}
-            setItems={setItems}
-            key={column.value}
-          />
-        ))}
-      </ul>
     </DragDropContext>
   ) 
 }
