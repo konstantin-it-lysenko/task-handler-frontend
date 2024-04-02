@@ -22,3 +22,7 @@ export const saveTokenStorage = (accessToken: string) => {
 export const removeFromStorage = () => {
     Cookies.remove(EnumTokens.ACCESS_TOKEN)
 }
+
+export const clearCookie = (name: string) => {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
