@@ -14,7 +14,7 @@ export const saveTokenStorage = (accessToken: string) => {
     Cookies.set(EnumTokens.ACCESS_TOKEN, accessToken, {
         domain: 'task-handler-frontend.vercel.app/',
         sameSite: 'none',
-        secure: false,
+        secure: true,
         expires: 1
     })
 }
