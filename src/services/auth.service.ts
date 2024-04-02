@@ -1,6 +1,7 @@
 import { axiosInstance } from '@/api/interceptors';
 import { IAuthForm, IAuthResponse } from './../types/auth.types';
 import { removeFromStorage, saveTokenStorage } from './auth-token.service';
+
 export const authService = {
     async main(type: 'login' | 'register', data: IAuthForm) {
         const response = await axiosInstance.post<IAuthResponse>(
