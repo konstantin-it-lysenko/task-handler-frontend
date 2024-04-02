@@ -1,6 +1,6 @@
 import { axiosInstance } from '@/api/interceptors';
 import { IAuthForm, IAuthResponse } from './../types/auth.types';
-import { EnumTokens, clearCookie, removeFromStorage, saveTokenStorage } from './auth-token.service';
+import { removeFromStorage, saveTokenStorage } from './auth-token.service';
 
 export const authService = {
     async main(type: 'login' | 'register', data: IAuthForm) {
@@ -26,10 +26,8 @@ export const authService = {
 
     async logout() {
         const response = await axiosInstance.post<boolean>('/auth/logout')
-        
+
         if (response.data) removeFromStorage()
-        
-        clearCookie(EnumTokens.ACCESS_TOKEN)
         
         return response
     }
