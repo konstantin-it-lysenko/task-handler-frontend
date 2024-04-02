@@ -12,7 +12,7 @@ export const getAccessToken = () => {
 
 export const saveTokenStorage = (accessToken: string) => {
     Cookies.set(EnumTokens.ACCESS_TOKEN, accessToken, {
-        domain: 'task-handler-frontend.vercel.app',
+        domain: '.task-handler-frontend.vercel.app',
         sameSite: 'none',
         secure: true,
         expires: 1
