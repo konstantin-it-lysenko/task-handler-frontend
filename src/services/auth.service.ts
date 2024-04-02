@@ -25,8 +25,10 @@ export const authService = {
     },
 
     async logout() {
-        removeFromStorage()
+        const response = await axiosInstance.post<boolean>('/auth/logout')
+
+        if (response.data) removeFromStorage()
         
-        await axiosInstance.post<boolean>('/auth/logout')
+        return response
     }
 }
